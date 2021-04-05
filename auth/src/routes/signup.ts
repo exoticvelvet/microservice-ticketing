@@ -3,9 +3,8 @@ import "express-async-errors";
 import { body } from "express-validator";
 import jwt from "jsonwebtoken";
 
-import { validateRequest } from "../middlewares/validate-request";
+import { validateRequest, BadRequestError } from "@xyztickets/tickets-common";
 import { User } from "../models/user";
-import { BadRequestError } from "../errors/bad-request-error";
 
 const router = express.Router();
 
